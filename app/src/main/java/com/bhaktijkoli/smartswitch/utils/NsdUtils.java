@@ -92,6 +92,7 @@ public class NsdUtils {
             @Override
             public void onResolveFailed(NsdServiceInfo serviceInfo, int errorCode) {
                 Log.e("NSD", "Resolve failed" + errorCode);
+                mNsdManager.stopServiceDiscovery(mDiscoveryListener);
             }
 
             @Override
@@ -101,6 +102,7 @@ public class NsdUtils {
                 String address = host.getHostAddress();
                 Log.d("NSD", "Resolved address = " + address);
                 if(nsdUtilListner != null) nsdUtilListner.onDeviceFound(address);
+                mNsdManager.stopServiceDiscovery(mDiscoveryListener);
             }
         };
     }
