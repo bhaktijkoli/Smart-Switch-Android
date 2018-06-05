@@ -21,8 +21,8 @@ public class NsdUtils {
     private NsdServiceInfo mServiceInfo;
     private NsdUtilListner nsdUtilListner;
 
-    private static final String SERVICE_TYPE = "_http._tcp.";
-    private static final String SERVICE_NAME = "esp8266";
+    private static final String SERVICE_TYPE = "_ws._tcp.";
+    private static final String SERVICE_NAME = "smartswitchv2";
 
 
     public NsdUtils(Context context) {
